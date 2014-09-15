@@ -11,14 +11,15 @@ $board_state = [[ "bR", "bN", "bB", "bQ", "bK", "bB", "bN", "bR" ],
 				[ "wR", "wN", "wB", "wQ", "wK", "wB", "wN", "wR" ]]
 
 def output
+	puts "\n------------------------"
 	$board_state.each{ |x|
-		puts ""
+		print "|"
 		x.each { |y|
-			print y
-			print y.length == 1 ? "  " : " "
+			print y != "0" ? y : " "
+			print y.length == 1 ? " |" : "|"
 		}
+		puts "\n------------------------"
 	}
-	#puts $board_state[0].to_s
 	puts ""
 end
 
